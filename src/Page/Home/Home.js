@@ -7,7 +7,9 @@ const Home = () => {
   const { data: movies = [] } = useQuery({
     queryKey: ["all-movies"],
     queryFn: () =>
-      fetch("http://localhost:5000/all-movies").then((res) => res.json()),
+      fetch("https://movies-server-dusky.vercel.app/all-movies").then((res) =>
+        res.json()
+      ),
   });
 
   return (

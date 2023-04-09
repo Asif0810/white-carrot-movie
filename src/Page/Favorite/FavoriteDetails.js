@@ -5,7 +5,7 @@ const FavoriteDetails = ({ favorite, refetch }) => {
   console.log(favorite);
   const { poster, title, _id } = favorite;
   const deleteHandler = (_id) => {
-    fetch(`http://localhost:5000/delete/${_id}`, {
+    fetch(`https://movies-server-dusky.vercel.app/delete/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

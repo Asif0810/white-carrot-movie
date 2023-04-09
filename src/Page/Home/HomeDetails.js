@@ -18,7 +18,7 @@ const HomeDetails = ({ movie }) => {
     };
 
     if (user?.email) {
-      fetch("http://localhost:5000/favorite", {
+      fetch("https://movies-server-dusky.vercel.app/favorite", {
         method: "POST",
         headers: {
           "content-type": "application/json",

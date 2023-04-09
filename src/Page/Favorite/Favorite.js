@@ -9,9 +9,9 @@ const Favorite = () => {
   const { data: favorites = [], refetch } = useQuery({
     queryKey: ["my-favorite", email],
     queryFn: () =>
-      fetch(`http://localhost:5000/my-favorite?email=${email}`).then((res) =>
-        res.json().catch(console.error())
-      ),
+      fetch(
+        `https://movies-server-dusky.vercel.app/my-favorite?email=${email}`
+      ).then((res) => res.json().catch(console.error())),
   });
   console.log(favorites);
   return (
